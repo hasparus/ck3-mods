@@ -5,8 +5,6 @@ eclectic_traditions_decision = {
 
 	decision_group_type = major
 
-	ai_check_interval = 0
-
 	is_shown = {
 		is_ai = no
 		culture = {
@@ -15,7 +13,10 @@ eclectic_traditions_decision = {
 	}
 
 	is_valid = {
-		is_independent_ruler = yes
+		custom_tooltip = {
+			text = eclectic_traditions_decision_requires_independent_tt
+			is_independent_ruler = yes
+		}
 	}
 
 	cost = {
@@ -28,9 +29,5 @@ eclectic_traditions_decision = {
 		root.culture = {
 			add_culture_tradition = eclectic_traditions
 		}
-	}
-
-	ai_will_do = {
-		value = 0
 	}
 }

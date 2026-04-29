@@ -4,7 +4,7 @@ eclectic_traditions = {
 	layers = {
 		0 = learning
 		1 = mediterranean
-		4 = scroll.dds
+		4 = conversation.dds
 	}
 
 	parameters = {
@@ -13,8 +13,7 @@ eclectic_traditions = {
 
 	culture_modifier = {
 		culture_tradition_max_add = 20
-		cultural_head_fascination_mult = 0.2
-		culture_acceptance_gain_mult = 0.1
+		cultural_acceptance_gain_mult = 0.1
 	}
 
 	can_pick = {

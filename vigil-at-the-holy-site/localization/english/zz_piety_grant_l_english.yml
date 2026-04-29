@@ -3,8 +3,10 @@
  zz_holy_site_vigil_decision_tooltip: "Devote yourself to your faith — and offer up a captive to seal the rite."
  zz_holy_site_vigil_decision_confirm: "Begin the Vigil"
 
- zz_holy_site_vigil_decision_norse_desc: "[vigil_offering.GetFirstName] is bound to the sacred harrow. For a fortnight you fast and carve runes; on the last night, their blood waters the roots of the world-tree. Odin's whisper rides the wind home with you."
- zz_holy_site_vigil_decision_christian_desc: "You retire to a quiet monastery, fasting and keeping vigil before the relics. The heretic [vigil_offering.GetFirstName] is given over to the Church's justice as the price of your contrition. When you emerge, the brothers say you carry the bearing of a saint."
- zz_holy_site_vigil_decision_islamic_desc: "Weeks of prayer, study, and almsgiving follow your retreat from court. [vigil_offering.GetFirstName], enemy of the faith, meets the executioner's blade as your offering. The faithful speak your name with new reverence."
- zz_holy_site_vigil_decision_tengri_desc: "You ride alone to the highest peak with [vigil_offering.GetFirstName] in chains. Beneath the Eternal Blue Sky, the captive's blood is given to the wind and the eagles. You return lean and brittle, with a hardness in your eye."
- zz_holy_site_vigil_decision_default_desc: "You set aside the cares of rule for the divine. [vigil_offering.GetFirstName] is given over to the rites your faith demands. When you return, the world is unchanged but you are not."
+ zz_holy_site_vigil_decision_norse_desc: "A captive is bound to the sacred harrow. For a fortnight you fast and carve runes; on the last night, their blood waters the roots of the world-tree. Odin's whisper rides the wind home with you."
+ zz_holy_site_vigil_decision_christian_desc: "You retire to a quiet monastery, fasting and keeping vigil before the relics. A heretic from your dungeons is given over to the Church's justice as the price of your contrition. When you emerge, the brothers say you carry the bearing of a saint."
+ zz_holy_site_vigil_decision_islamic_desc: "Weeks of prayer, study, and almsgiving follow your retreat from court. An enemy of the faith, drawn from your dungeons, meets the executioner's blade as your offering. The faithful speak your name with new reverence."
+ zz_holy_site_vigil_decision_tengri_desc: "You ride alone to the highest peak with a captive in chains. Beneath the Eternal Blue Sky, their blood is given to the wind and the eagles. You return lean and brittle, with a hardness in your eye."
+ zz_holy_site_vigil_decision_default_desc: "You set aside the cares of rule for the divine. A captive from your dungeons is given over to the rites your faith demands. When you return, the world is unchanged but you are not."
+
+ zz_holy_site_vigil_requires_prisoner_tt: "You hold at least one captive in your dungeons"

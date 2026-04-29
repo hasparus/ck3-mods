@@ -19,8 +19,14 @@ vampiric_crimson_bath_decision = {
 	}
 
 	is_valid = {
-		has_trait = whole_of_body
-		any_prisoner = { count >= 1 }
+		custom_tooltip = {
+			text = vampiric_crimson_bath_requires_whole_of_body_tt
+			has_trait = whole_of_body
+		}
+		custom_tooltip = {
+			text = vampiric_crimson_bath_requires_prisoner_tt
+			any_prisoner = { count >= 1 }
+		}
 	}
 
 	cooldown = { years = 5 }

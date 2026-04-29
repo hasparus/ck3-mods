@@ -13,7 +13,10 @@ zz_holy_site_vigil_decision = {
 	}
 
 	is_valid = {
-		any_prisoner = { count >= 1 }
+		custom_tooltip = {
+			text = zz_holy_site_vigil_requires_prisoner_tt
+			any_prisoner = { count >= 1 }
+		}
 	}
 
 	desc = {
