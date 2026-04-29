@@ -9,6 +9,7 @@ eclectic_traditions = {
 
 	parameters = {
 		culture_is_eclectic = yes
+		cheaper_to_hybridize = yes
 	}
 
 	culture_modifier = {
