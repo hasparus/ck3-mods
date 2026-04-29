@@ -1,0 +1,56 @@
+zz_holy_site_vigil_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_faith.dds"
+	}
+
+	decision_group_type = minor
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		NOT = { has_global_variable = zz_holy_site_vigil_done }
+	}
+
+	is_valid = {
+		any_prisoner = { count >= 1 }
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { faith = { religion_tag = germanic_religion } }
+				desc = zz_holy_site_vigil_decision_norse_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = christianity_religion } }
+				desc = zz_holy_site_vigil_decision_christian_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = islam_religion } }
+				desc = zz_holy_site_vigil_decision_islamic_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = tengri_religion } }
+				desc = zz_holy_site_vigil_decision_tengri_desc
+			}
+			desc = zz_holy_site_vigil_decision_default_desc
+		}
+	}
+
+	effect = {
+		random_prisoner = {
+			save_scope_as = vigil_offering
+			death = {
+				killer = root
+				reason = death_sacrificed
+			}
+		}
+		add_piety = 10000
+		set_global_variable = zz_holy_site_vigil_done
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}

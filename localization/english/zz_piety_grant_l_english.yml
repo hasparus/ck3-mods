@@ -1,0 +1,10 @@
+﻿l_english:
+ zz_holy_site_vigil_decision: "Vigil at the Holy Site"
+ zz_holy_site_vigil_decision_tooltip: "Devote yourself wholly to your faith — and offer up a captive of your choosing to seal the rite."
+ zz_holy_site_vigil_decision_confirm: "Begin the Vigil"
+
+ zz_holy_site_vigil_decision_norse_desc: "You travel to a sacred grove where the ash trees groan beneath ravens. A captive — [vigil_offering.GetFirstName] of your dungeons — is bound to the harrow. For a fortnight you fast, carve runes, and on the last night the [vigil_offering.GetFirstName]'s blood waters the roots of the world-tree. Odin's whisper rides the wind home with you."
+ zz_holy_site_vigil_decision_christian_desc: "You retire to a quiet monastery and submit to its rule. By candlelight you fast and keep vigil before the relics. A captive of your dungeons — [vigil_offering.GetFirstName], judged a heretic and unrepentant — is given over to the Church's justice as the price of your contrition. When you emerge, the brothers say you carry the bearing of a saint."
+ zz_holy_site_vigil_decision_islamic_desc: "You set aside the affairs of state and seek the company of scholars. Weeks of prayer, study, and almsgiving follow. A captive of your dungeons — [vigil_offering.GetFirstName], an enemy of the faith — meets the executioner's blade as your offering for divine favor. The faithful speak your name with new reverence in the markets."
+ zz_holy_site_vigil_decision_tengri_desc: "You ride alone to the sky-altar at the highest peak you can find, leading [vigil_offering.GetFirstName] in chains behind you. There, beneath the Eternal Blue Sky, the captive's blood is given to the wind and the eagles. You return lean and brittle, with a hardness in your eye no man dares meet."
+ zz_holy_site_vigil_decision_default_desc: "You set aside the cares of rule and devote yourself wholly to the divine. A captive of your dungeons — [vigil_offering.GetFirstName] — is given over to the rites your faith demands. When you return to your hall, the world is unchanged but you are not."
