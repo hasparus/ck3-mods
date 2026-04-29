@@ -1,0 +1,46 @@
+vampiric_crimson_bath_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+	}
+
+	decision_group_type = minor
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		OR = {
+			has_trait = infirm
+			has_trait = clouded_eyes
+			has_trait = faltering_heart
+			has_trait = fragile_bones
+			has_trait = withering_mind
+		}
+	}
+
+	is_valid = {
+		has_trait = whole_of_body
+		any_prisoner = { count >= 1 }
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		random_prisoner = {
+			save_scope_as = vampiric_offering
+			death = {
+				killer = root
+				reason = death_sacrificed
+			}
+		}
+		if = { limit = { has_trait = infirm } remove_trait = infirm }
+		if = { limit = { has_trait = clouded_eyes } remove_trait = clouded_eyes }
+		if = { limit = { has_trait = faltering_heart } remove_trait = faltering_heart }
+		if = { limit = { has_trait = fragile_bones } remove_trait = fragile_bones }
+		if = { limit = { has_trait = withering_mind } remove_trait = withering_mind }
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}

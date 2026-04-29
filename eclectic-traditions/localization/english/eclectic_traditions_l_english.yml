@@ -1,0 +1,8 @@
+﻿l_english:
+ eclectic_traditions_name: "Eclectic Traditions"
+ eclectic_traditions_desc: "This people gather wisdom from every road that crosses their lands. Foreign sages are welcomed at the high table; merchants are pressed for stories of distant rites; the children grow up speaking of customs their grandparents would have called heresy. No single way is held above all others — and so all ways are theirs to keep."
+
+ eclectic_traditions_decision: "Open the Hall to Foreign Customs"
+ eclectic_traditions_decision_tooltip: "Welcome scholars, merchants, and holy men of every tongue into your court. Make your culture a meeting-place of the world's traditions."
+ eclectic_traditions_decision_confirm: "Throw the Doors Open"
+ eclectic_traditions_decision_desc: "For a long season your hall is filled with strange voices. A Greek physician argues with a desert ascetic; a steppe singer trades verses with a Frankish monk; a merchant from far Cathay lays out silks no one in your land has ever named. You feast them all, listen to them all, and quietly let the heralds know: from this day forward, no foreign rite is forbidden in [ROOT.Char.GetCulture.GetName] lands. The old ways are safe — but they are no longer the only ways."

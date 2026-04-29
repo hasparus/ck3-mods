@@ -1,0 +1,36 @@
+eclectic_traditions_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+	}
+
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		culture = {
+			NOT = { has_cultural_tradition = eclectic_traditions }
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+	}
+
+	cost = {
+		gold = 1000
+		prestige = 2000
+		piety = 1000
+	}
+
+	effect = {
+		root.culture = {
+			add_culture_tradition = eclectic_traditions
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}

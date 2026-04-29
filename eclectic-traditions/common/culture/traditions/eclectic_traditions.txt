@@ -1,0 +1,39 @@
+eclectic_traditions = {
+	category = societal
+
+	layers = {
+		0 = learning
+		1 = mediterranean
+		4 = scroll.dds
+	}
+
+	parameters = {
+		culture_is_eclectic = yes
+	}
+
+	culture_modifier = {
+		culture_tradition_max_add = 20
+		cultural_head_fascination_mult = 0.2
+		culture_acceptance_gain_mult = 0.1
+	}
+
+	can_pick = {
+		always = yes
+	}
+
+	can_pick_for_hybridization = {
+		always = yes
+	}
+
+	cost = {
+		prestige = {
+			value = tradition_base_cost
+			desc = BASE
+			format = "BASE_VALUE_FORMAT"
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}

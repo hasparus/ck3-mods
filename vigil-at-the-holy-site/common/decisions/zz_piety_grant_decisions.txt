@@ -1,6 +1,6 @@
 zz_holy_site_vigil_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_faith.dds"
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 
 	decision_group_type = minor
