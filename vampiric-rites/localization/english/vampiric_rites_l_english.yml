@@ -5,4 +5,4 @@
  vampiric_crimson_bath_decision_desc: "Behind sealed doors in the deepest cellar of your keep, the old rite is prepared. A captive, dragged from your dungeons, is bound to the iron table; the basin beneath fills slowly. You drink, and you wash, and somewhere in the long hour the ache in your bones begins to ease. By dawn you are someone younger. The servants who clean the chamber do not meet your eye."
 
  vampiric_crimson_bath_requires_whole_of_body_tt: "You have the [GetTrait('whole_of_body').GetName( GetNullCharacter )] trait"
- vampiric_crimson_bath_requires_prisoner_tt: "You hold at least one captive in your dungeons"
+ vampiric_crimson_bath_requires_prisoner_tt: "You hold at least one captive younger than 30 in your dungeons"

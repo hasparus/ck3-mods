@@ -25,7 +25,10 @@ vampiric_crimson_bath_decision = {
 		}
 		custom_tooltip = {
 			text = vampiric_crimson_bath_requires_prisoner_tt
-			any_prisoner = { count >= 1 }
+			any_prisoner = {
+				count >= 1
+				age < 30
+			}
 		}
 	}
 
@@ -33,6 +36,7 @@ vampiric_crimson_bath_decision = {
 
 	effect = {
 		random_prisoner = {
+			limit = { age < 30 }
 			save_scope_as = vampiric_offering
 			death = {
 				killer = root
