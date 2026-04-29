@@ -44,6 +44,10 @@ vampiric_crimson_bath_decision = {
 		if = { limit = { has_trait = faltering_heart } remove_trait = faltering_heart }
 		if = { limit = { has_trait = fragile_bones } remove_trait = fragile_bones }
 		if = { limit = { has_trait = withering_mind } remove_trait = withering_mind }
+		if = {
+			limit = { NOT = { has_trait = witch } }
+			give_witch_secret_or_trait_effect = yes
+		}
 	}
 
 	ai_will_do = {
