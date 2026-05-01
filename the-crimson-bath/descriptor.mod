@@ -3,5 +3,5 @@ tags={
 	"Gameplay"
 	"Events"
 }
-name="Vampiric Rites"
+name="The Crimson Bath"
 supported_version="1.19.*"

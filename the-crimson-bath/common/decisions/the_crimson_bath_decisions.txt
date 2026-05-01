@@ -1,0 +1,118 @@
+crimson_bath_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+	}
+
+	decision_group_type = minor
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		OR = {
+			has_trait = infirm
+			has_trait = clouded_eyes
+			has_trait = faltering_heart
+			has_trait = fragile_bones
+			has_trait = withering_mind
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = crimson_bath_requires_whole_of_body_tt
+			has_trait = whole_of_body
+		}
+		custom_tooltip = {
+			text = crimson_bath_requires_prisoner_tt
+			any_prisoner = {
+				count >= 1
+				age < 30
+			}
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		if = {
+			limit = {
+				has_trait = infirm
+				any_prisoner = { count >= 1 age < 30 }
+			}
+			random_prisoner = {
+				limit = { age < 30 }
+				death = {
+					killer = root
+					reason = death_sacrificed
+				}
+			}
+			remove_trait = infirm
+		}
+		if = {
+			limit = {
+				has_trait = clouded_eyes
+				any_prisoner = { count >= 1 age < 30 }
+			}
+			random_prisoner = {
+				limit = { age < 30 }
+				death = {
+					killer = root
+					reason = death_sacrificed
+				}
+			}
+			remove_trait = clouded_eyes
+		}
+		if = {
+			limit = {
+				has_trait = faltering_heart
+				any_prisoner = { count >= 1 age < 30 }
+			}
+			random_prisoner = {
+				limit = { age < 30 }
+				death = {
+					killer = root
+					reason = death_sacrificed
+				}
+			}
+			remove_trait = faltering_heart
+		}
+		if = {
+			limit = {
+				has_trait = fragile_bones
+				any_prisoner = { count >= 1 age < 30 }
+			}
+			random_prisoner = {
+				limit = { age < 30 }
+				death = {
+					killer = root
+					reason = death_sacrificed
+				}
+			}
+			remove_trait = fragile_bones
+		}
+		if = {
+			limit = {
+				has_trait = withering_mind
+				any_prisoner = { count >= 1 age < 30 }
+			}
+			random_prisoner = {
+				limit = { age < 30 }
+				death = {
+					killer = root
+					reason = death_sacrificed
+				}
+			}
+			remove_trait = withering_mind
+		}
+		if = {
+			limit = { NOT = { has_trait = witch } }
+			give_witch_secret_or_trait_effect = yes
+		}
+		add_stress = minor_stress_gain
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}
