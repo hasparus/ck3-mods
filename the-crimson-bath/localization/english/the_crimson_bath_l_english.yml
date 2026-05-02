@@ -6,3 +6,10 @@
 
  crimson_bath_requires_whole_of_body_tt: "You have the [GetTrait('whole_of_body').GetName( GetNullCharacter )] trait"
  crimson_bath_requires_prisoner_tt: "You hold at least one captive younger than 30 in your dungeons"
+
+ nick_the_vampire:0 "the Vampire"
+ nick_the_vampire_desc:0 "Whispers in the kitchens and the cellars say that [CHARACTER.GetShortUINameNoTooltipNoFormat|U] keeps young by drinking the blood of captives."
+ nick_the_strigoi:0 "the Strigoi"
+ nick_the_strigoi_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is named for the restless dead of old folktales, who rise to feed on the living."
+ nick_the_pale:0 "the Pale"
+ nick_the_pale_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is rarely seen by daylight, and the servants do not meet their eye."

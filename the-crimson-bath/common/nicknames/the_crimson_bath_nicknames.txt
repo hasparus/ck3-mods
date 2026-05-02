@@ -1,0 +1,3 @@
+nick_the_vampire = { is_bad = yes }
+nick_the_strigoi = { is_bad = yes }
+nick_the_pale    = { is_bad = yes }
