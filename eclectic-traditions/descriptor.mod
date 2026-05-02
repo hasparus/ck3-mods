@@ -5,3 +5,4 @@ tags={
 }
 name="Eclectic Traditions"
 supported_version="1.19.*"
+picture="thumbnail.png"

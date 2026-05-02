@@ -5,3 +5,4 @@ tags={
 }
 name="The Crimson Bath"
 supported_version="1.19.*"
+picture="thumbnail.png"
