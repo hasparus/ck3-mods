@@ -28,7 +28,6 @@
  rival_zz_holy_site_desecrated: "Desecrated a holy place of #L my faith#!"
 
  vigil_holy_site.0002.t: "Vigil at the Holy Site"
- vigil_holy_site.0002.a.single: "Begin the vigil"
  vigil_holy_site.0002.a.norse: "Bind [scope:vigil_offering_a.GetShortUINameNoTooltipNoFormat|U] to the harrow"
  vigil_holy_site.0002.a.christian: "Send [scope:vigil_offering_a.GetShortUINameNoTooltipNoFormat|U] to the pyre"
  vigil_holy_site.0002.a.islamic: "Send [scope:vigil_offering_a.GetShortUINameNoTooltipNoFormat|U] to the blade"

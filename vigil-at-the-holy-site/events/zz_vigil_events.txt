@@ -57,10 +57,6 @@ vigil_holy_site.0002 = {
 			text = {
 				first_valid = {
 					triggered_desc = {
-						trigger = { NOT = { exists = scope:vigil_offering_b } }
-						desc = vigil_holy_site.0002.a.single
-					}
-					triggered_desc = {
 						trigger = { faith = { religion_tag = germanic_religion } }
 						desc = vigil_holy_site.0002.a.norse
 					}
