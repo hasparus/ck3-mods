@@ -1,0 +1,74 @@
+namespace = eclectic
+
+# Open the Hall to Foreign Customs — confirmation window for the eclectic decision.
+eclectic.0001 = {
+	type = character_event
+	title = eclectic_traditions_decision
+	desc = eclectic_traditions_decision_desc
+	theme = realm
+	override_background = { reference = feast }
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+	right_portrait = {
+		trigger = { exists = scope:eclectic_dissenter }
+		character = scope:eclectic_dissenter
+		animation = scorn
+	}
+
+	immediate = {
+		ordered_courtier = {
+			limit = {
+				culture = root.culture
+				OR = {
+					has_trait = zealous
+					has_trait = stubborn
+					has_trait = paranoid
+				}
+			}
+			order_by = age
+			save_scope_as = eclectic_dissenter
+		}
+		ordered_vassal = {
+			limit = {
+				culture = root.culture
+				OR = {
+					has_trait = zealous
+					has_trait = stubborn
+					has_trait = paranoid
+				}
+			}
+			order_by = primary_title.tier
+			save_scope_as = eclectic_dissenter
+		}
+	}
+
+	option = {
+		name = eclectic_traditions_decision_confirm
+
+		root.culture = {
+			add_culture_tradition = eclectic_traditions
+		}
+
+		every_vassal = {
+			limit = { culture = root.culture }
+			add_opinion = {
+				modifier = eclectic_traditions_betrayed
+				target = root
+				years = 5
+			}
+		}
+
+		if = {
+			limit = { exists = scope:eclectic_dissenter }
+			scope:eclectic_dissenter = {
+				set_relation_rival = {
+					reason = rival_eclectic_traditions
+					target = root
+				}
+			}
+		}
+	}
+}

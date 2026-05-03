@@ -1,6 +1,6 @@
 eclectic_traditions_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_culture.dds"
+		reference = "gfx/interface/illustrations/decisions/eclectic_traditions_decision.dds"
 	}
 
 	decision_group_type = major
@@ -26,52 +26,6 @@ eclectic_traditions_decision = {
 	}
 
 	effect = {
-		root.culture = {
-			add_culture_tradition = eclectic_traditions
-		}
-
-		every_vassal = {
-			limit = { culture = root.culture }
-			add_opinion = {
-				modifier = eclectic_traditions_betrayed
-				target = root
-				years = 5
-			}
-		}
-
-		ordered_courtier = {
-			limit = {
-				culture = root.culture
-				OR = {
-					has_trait = zealous
-					has_trait = stubborn
-					has_trait = paranoid
-				}
-			}
-			order_by = age
-			save_scope_as = eclectic_dissenter
-		}
-		ordered_vassal = {
-			limit = {
-				culture = root.culture
-				OR = {
-					has_trait = zealous
-					has_trait = stubborn
-					has_trait = paranoid
-				}
-			}
-			order_by = primary_title.tier
-			save_scope_as = eclectic_dissenter
-		}
-
-		if = {
-			limit = { exists = scope:eclectic_dissenter }
-			scope:eclectic_dissenter = {
-				set_relation_rival = {
-					reason = rival_eclectic_traditions
-					target = root
-				}
-			}
-		}
+		trigger_event = eclectic.0001
 	}
 }
