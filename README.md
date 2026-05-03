@@ -21,3 +21,10 @@ A societal tradition. It raises the tradition cap, speeds cultural acceptance, a
 A once-per-game decision. Sacrifice a captive; receive five thousand piety. The flavor adapts to your faith: Norse, Christian, Islamic, Tengri, or generic.
 
 After the Vigil, a second decision unlocks: while your army stands on a holy site of another faith, you may burn and desecrate it. The act grants another five thousand piety and leaves the county under a Desecrated Ground modifier for eighty years (-100% tax, -50% levy).
+
+**Consequences.** An act like this does not go unanswered. The faith of the desecrated holy place takes notice:
+
+- The most cunning believer among your vassals and neighbors (highest intrigue) becomes your rival and starts a murder scheme against you.
+- The most martial landed believer among them becomes your rival and declares a Punitive War. The war has no territorial goal: their warscore is your captivity. On their victory, you are dragged in chains to their dungeon.
+- If the holy place you desecrated lay inside your own realm, the Punitive War also reclaims its de jure duchy on your defeat.
+- If the same character is both the most cunning and the most martial, they take both roles, plotting and warring at once.
