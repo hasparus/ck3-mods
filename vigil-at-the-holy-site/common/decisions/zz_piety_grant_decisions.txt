@@ -76,18 +76,18 @@ zz_holy_site_desecration_decision = {
 		custom_tooltip = {
 			text = zz_holy_site_desecration_requires_army_tt
 			any_army = {
+				OR = {
+					location.barony.barony_controller ?= {
+						OR = {
+							this = root
+							target_is_liege_or_above = root
+						}
+					}
+					raid_loot >= 1
+				}
 				location.barony = {
 					is_holy_site = yes
 					NOT = { is_holy_site_of = root.faith }
-					OR = {
-						barony_controller ?= {
-							OR = {
-								this = root
-								target_is_liege_or_above = root
-							}
-						}
-						var:vigil_last_raider ?= root
-					}
 				}
 			}
 		}
@@ -96,18 +96,18 @@ zz_holy_site_desecration_decision = {
 	effect = {
 		random_army = {
 			limit = {
+				OR = {
+					location.barony.barony_controller ?= {
+						OR = {
+							this = root
+							target_is_liege_or_above = root
+						}
+					}
+					raid_loot >= 1
+				}
 				location.barony = {
 					is_holy_site = yes
 					NOT = { is_holy_site_of = root.faith }
-					OR = {
-						barony_controller ?= {
-							OR = {
-								this = root
-								target_is_liege_or_above = root
-							}
-						}
-						var:vigil_last_raider ?= root
-					}
 				}
 			}
 			location.barony = { save_scope_as = vigil_desecrated_barony }
