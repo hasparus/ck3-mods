@@ -194,6 +194,7 @@ vigil_holy_site.0003 = {
 		}
 		add_piety = 5000
 		set_global_variable = zz_holy_site_vigil_done
+		trigger_event = vigil_holy_site.0004
 	}
 
 	option = {
@@ -230,10 +231,131 @@ vigil_holy_site.0003 = {
 		}
 		add_piety = 5000
 		set_global_variable = zz_holy_site_vigil_done
+		trigger_event = vigil_holy_site.0004
 	}
 
 	option = {
 		name = vigil_holy_site.0003.c
+	}
+}
+
+# Vigil at the Holy Site — third step: read the omens of the rite.
+# Outcome is a Learning-weighted random_list on the officiant's stat.
+vigil_holy_site.0004 = {
+	type = character_event
+	title = vigil_holy_site.0004.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_variable_value = { name = vigil_omens_result value = flag:crit } }
+				desc = vigil_holy_site.0004.desc.crit
+			}
+			triggered_desc = {
+				trigger = { has_variable_value = { name = vigil_omens_result value = flag:success } }
+				desc = vigil_holy_site.0004.desc.success
+			}
+			triggered_desc = {
+				trigger = { has_variable_value = { name = vigil_omens_result value = flag:ambiguous } }
+				desc = vigil_holy_site.0004.desc.ambiguous
+			}
+			desc = vigil_holy_site.0004.desc.failure
+		}
+	}
+	theme = faith
+	override_background = { reference = holy_site_generic }
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		trigger = {
+			exists = scope:vigil_officiant
+			NOT = { scope:vigil_officiant = root }
+		}
+		character = scope:vigil_officiant
+		animation = personality_zealous
+	}
+
+	immediate = {
+		random_list = {
+			15 = {
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning >= 14 } }
+					factor = {
+						value = scope:vigil_officiant.learning
+						subtract = 13
+						multiply = 4
+					}
+				}
+				set_variable = { name = vigil_omens_result value = flag:crit }
+				add_character_modifier = {
+					modifier = vigil_blessed_by_omens
+					years = 5
+				}
+				faith = { add_fervor = 3 }
+				random_targeting_scheme = {
+					limit = { scheme_type = murder }
+					expose_scheme = yes
+				}
+			}
+			30 = {
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning >= 10 } }
+					add = {
+						value = scope:vigil_officiant.learning
+						subtract = 10
+						multiply = 3
+					}
+				}
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning <= 5 } }
+					add = 5
+				}
+				set_variable = { name = vigil_omens_result value = flag:success }
+				add_character_modifier = {
+					modifier = vigil_blessed_by_omens
+					years = 5
+				}
+			}
+			35 = {
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning >= 12 } }
+					factor = 0.5
+				}
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning <= 6 } }
+					add = 10
+				}
+				set_variable = { name = vigil_omens_result value = flag:ambiguous }
+			}
+			50 = {
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning >= 15 } }
+					factor = 0
+				}
+				modifier = {
+					trigger = { scope:vigil_officiant = { learning <= 4 } }
+					add = 20
+				}
+				set_variable = { name = vigil_omens_result value = flag:failure }
+				add_character_modifier = {
+					modifier = vigil_dark_omens
+					years = 3
+				}
+				add_stress = minor_stress_gain
+				random = {
+					chance = 25
+					modifier = { factor = 0 has_trait = paranoid }
+					add_trait = paranoid
+				}
+			}
+		}
+	}
+
+	option = {
+		name = vigil_holy_site.0004.a
+		remove_variable = vigil_omens_result
 	}
 }
 

@@ -48,6 +48,18 @@
  vigil_holy_site.0003.b.default: "Bind [scope:vigil_offering_b.GetShortUINameNoTooltipNoFormat|U] to the altar instead"
  vigil_holy_site.0003.c: "Abandon this place"
 
+ vigil_holy_site.0004.t: "The Omens"
+ vigil_holy_site.0004.desc.crit: "The signs are unmistakable. Smoke rises in a clean line; the carrion birds wheel three times and settle. Whatever your priests fear to name aloud, you have read it cleanly. The road ahead lies open, and the knife in the dark is no longer hidden from you."
+ vigil_holy_site.0004.desc.success: "Your eyes find what they were meant to find. The signs settle in your mind, quiet and certain. You will carry this clarity for years."
+ vigil_holy_site.0004.desc.ambiguous: "The signs are mixed. Smoke turns this way, then that. The blood pools without pattern. There is no message here, or none you can read. You bow your head and let the matter rest."
+ vigil_holy_site.0004.desc.failure: "Something has gone wrong. The signs do not cohere; the air feels wrong; a servant runs out and is sick on the steps. Whatever you have looked at has looked back. You leave the holy place, and a part of you does not return with the rest."
+ vigil_holy_site.0004.a: "So be it"
+
+ vigil_blessed_by_omens: "Blessed by the Omens"
+ vigil_blessed_by_omens_desc: "The signs at the holy place fell true. The world is open and your hand is steady."
+ vigil_dark_omens: "Dark Omens"
+ vigil_dark_omens_desc: "The signs at the holy place did not cohere. Something unwelcome looked back through them."
+
  vigil_holy_site.0001.t: "Burn the Infidel Holy Place"
  vigil_holy_site.0001.desc: "Your soldiers do not march and your priests do not pray. Pitch and torch are brought to the holy place; whatever can be torn down will be torn down, and whatever cannot will be fouled. By dawn you will leave ash and rubble behind you. The peasants who creep back to this ground will speak of it for generations."
  vigil_holy_site.0001.a: "Set the torches"
