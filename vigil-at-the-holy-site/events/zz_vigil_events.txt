@@ -344,10 +344,12 @@ vigil_holy_site.0004 = {
 					years = 3
 				}
 				add_stress = minor_stress_gain
-				random = {
-					chance = 25
-					modifier = { factor = 0 has_trait = paranoid }
-					add_trait = paranoid
+				scope:vigil_officiant = {
+					random = {
+						chance = 25
+						modifier = { factor = 0 has_trait = paranoid }
+						add_trait = paranoid
+					}
 				}
 			}
 		}
