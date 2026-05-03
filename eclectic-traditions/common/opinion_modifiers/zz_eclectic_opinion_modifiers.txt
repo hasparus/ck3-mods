@@ -1,0 +1,3 @@
+eclectic_traditions_betrayed = {
+	opinion = -15
+}

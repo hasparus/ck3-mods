@@ -12,7 +12,9 @@ A decision for an aged ruler with young captives. Each old-age malady (infirm, c
 
 > This people gather wisdom from every road that crosses their lands. Foreign sages are welcomed at the high table; merchants are pressed for stories of distant rites; the children grow up speaking of customs their grandparents would have called heresy. No single way is held above all others, and so all ways are theirs to keep.
 
-A societal tradition. It raises the tradition cap, speeds cultural acceptance, and cheapens hybridization. An independent ruler may take it by decision.
+A societal tradition. It raises the tradition cap and speeds cultural acceptance. An independent ruler may take it by decision.
+
+**Consequences.** Not everyone in your court is glad to see foreigners at the high table. Every vassal of your culture takes a -15 opinion penalty against you for five years. The most prominent same-culture traditionalist (`zealous`, `stubborn`, or `paranoid`), preferring vassals over courtiers, becomes your rival.
 
 ## vigil-at-the-holy-site
 
