@@ -71,4 +71,11 @@ eclectic.0001 = {
 			}
 		}
 	}
+
+	option = {
+		name = eclectic.0001.b
+		add_gold = 1000
+		add_prestige = 2000
+		add_piety = 1000
+	}
 }
