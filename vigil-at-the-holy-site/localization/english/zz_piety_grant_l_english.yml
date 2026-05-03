@@ -16,7 +16,7 @@
  zz_holy_site_desecration_decision_confirm: "Set the Torches"
  zz_holy_site_desecration_decision_desc: "Your soldiers do not march and your priests do not pray. Pitch and torch are brought to the holy place; whatever can be torn down is torn down, and whatever cannot is fouled. You leave ash and rubble behind you. The peasants who creep back will speak of this for eighty years."
 
- zz_holy_site_desecration_requires_army_tt: "Your army stands on a holy site of a faith other than yours"
+ zz_holy_site_desecration_requires_army_tt: "Your army stands on a holy site of a faith other than yours that you hold by right or by siege"
 
  zz_holy_site_desecrated: "Desecrated Ground"
  zz_holy_site_desecrated_desc: "The holy place was burned and fouled by foreign troops. The land will not recover for generations."

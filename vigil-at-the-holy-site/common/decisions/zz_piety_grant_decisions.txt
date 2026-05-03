@@ -79,6 +79,12 @@ zz_holy_site_desecration_decision = {
 				location.barony = {
 					is_holy_site = yes
 					NOT = { is_holy_site_of = root.faith }
+					barony_controller ?= {
+						OR = {
+							this = root
+							target_is_liege_or_above = root
+						}
+					}
 				}
 			}
 		}
@@ -90,6 +96,12 @@ zz_holy_site_desecration_decision = {
 				location.barony = {
 					is_holy_site = yes
 					NOT = { is_holy_site_of = root.faith }
+					barony_controller ?= {
+						OR = {
+							this = root
+							target_is_liege_or_above = root
+						}
+					}
 				}
 			}
 			location.barony = { save_scope_as = vigil_desecrated_barony }
