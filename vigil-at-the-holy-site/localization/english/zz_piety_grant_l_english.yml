@@ -20,3 +20,8 @@
 
  zz_holy_site_desecrated: "Desecrated Ground"
  zz_holy_site_desecrated_desc: "The holy place was burned and fouled by foreign troops. The land will not recover for generations."
+
+ ZZ_PUNITIVE_WAR_NAME: "$ATTACKER$'s Punitive War against $DEFENDER$"
+ zz_punitive_war_victory_desc: "$ATTACKER$ has avenged the desecrated holy place. $DEFENDER$ is dragged in chains to the victor's dungeon."
+
+ rival_zz_holy_site_desecrated: "Desecrated a holy place of #L my faith#!"
