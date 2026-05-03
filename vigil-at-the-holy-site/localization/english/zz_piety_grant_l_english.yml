@@ -1,7 +1,7 @@
 ﻿l_english:
  zz_holy_site_vigil_decision: "Vigil at the Holy Site"
  zz_holy_site_vigil_decision_tooltip: "Devote yourself to your faith — and offer up a captive to seal the rite."
- zz_holy_site_vigil_decision_confirm: "Begin the Vigil"
+ zz_holy_site_vigil_decision_confirm: "Begin the vigil"
 
  zz_holy_site_vigil_decision_norse_desc: "A captive is bound to the sacred harrow. For a fortnight you fast and carve runes; on the last night, their blood waters the roots of the world-tree. Odin's whisper rides the wind home with you."
  zz_holy_site_vigil_decision_christian_desc: "You retire to a quiet monastery, fasting and keeping vigil before the relics. A heretic from your dungeons is given over to the Church's justice as the price of your contrition. When you emerge, the brothers say you carry the bearing of a saint."
@@ -26,6 +26,10 @@
  zz_punitive_war_victory_desc: "$ATTACKER$ has avenged the desecrated holy place. $DEFENDER$ is dragged in chains to the victor's dungeon."
 
  rival_zz_holy_site_desecrated: "Desecrated a holy place of #L my faith#!"
+
+ vigil_holy_site.0002.t: "Vigil at the Holy Site"
+ vigil_holy_site.0002.a: "Begin the vigil"
+ vigil_holy_site.0002.b: "Spare them"
 
  vigil_holy_site.0001.t: "Burn the Infidel Holy Place"
  vigil_holy_site.0001.desc: "Your soldiers do not march and your priests do not pray. Pitch and torch are brought to the holy place; whatever can be torn down will be torn down, and whatever cannot will be fouled. By dawn you will leave ash and rubble behind you. The peasants who creep back to this ground will speak of it for generations."

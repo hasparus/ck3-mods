@@ -1,5 +1,66 @@
 namespace = vigil_holy_site
 
+# Vigil at the Holy Site — confirmation window for the vigil decision.
+vigil_holy_site.0002 = {
+	type = character_event
+	title = vigil_holy_site.0002.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { faith = { religion_tag = germanic_religion } }
+				desc = zz_holy_site_vigil_decision_norse_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = christianity_religion } }
+				desc = zz_holy_site_vigil_decision_christian_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = islam_religion } }
+				desc = zz_holy_site_vigil_decision_islamic_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = tengri_religion } }
+				desc = zz_holy_site_vigil_decision_tengri_desc
+			}
+			desc = zz_holy_site_vigil_decision_default_desc
+		}
+	}
+	theme = faith
+	override_background = { reference = holy_site_generic }
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		character = scope:vigil_offering
+		animation = shame
+	}
+
+	immediate = {
+		random_prisoner = {
+			save_scope_as = vigil_offering
+		}
+	}
+
+	option = {
+		name = vigil_holy_site.0002.a
+
+		scope:vigil_offering = {
+			death = {
+				killer = root
+				reason = death_sacrificed
+			}
+		}
+		add_piety = 5000
+		set_global_variable = zz_holy_site_vigil_done
+	}
+
+	option = {
+		name = vigil_holy_site.0002.b
+	}
+}
+
 # Burn the Infidel Holy Place — confirmation window for the desecration decision.
 vigil_holy_site.0001 = {
 	type = character_event
