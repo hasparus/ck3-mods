@@ -1,6 +1,6 @@
 zz_holy_site_vigil_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+		reference = "gfx/interface/illustrations/decisions/zz_holy_site_vigil_decision.dds"
 	}
 
 	decision_group_type = minor
@@ -36,7 +36,7 @@ zz_holy_site_vigil_decision = {
 
 zz_holy_site_desecration_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+		reference = "gfx/interface/illustrations/decisions/zz_holy_site_desecration_decision.dds"
 	}
 
 	decision_group_type = minor

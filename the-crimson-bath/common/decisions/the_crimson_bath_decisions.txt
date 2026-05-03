@@ -1,6 +1,6 @@
 crimson_bath_decision = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+		reference = "gfx/interface/illustrations/decisions/crimson_bath_decision.dds"
 	}
 
 	decision_group_type = minor
