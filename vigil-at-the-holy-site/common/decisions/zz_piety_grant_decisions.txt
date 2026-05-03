@@ -49,8 +49,60 @@ zz_holy_site_vigil_decision = {
 				reason = death_sacrificed
 			}
 		}
-		add_piety = 10000
+		add_piety = 5000
 		set_global_variable = zz_holy_site_vigil_done
+	}
+
+	ai_will_do = {
+		value = 0
+	}
+}
+
+zz_holy_site_desecration_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_siege_warfare.dds"
+	}
+
+	decision_group_type = minor
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_ai = no
+		has_global_variable = zz_holy_site_vigil_done
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = zz_holy_site_desecration_requires_army_tt
+			any_army = {
+				location.barony = {
+					is_holy_site = yes
+					NOT = { is_holy_site_of = root.faith }
+				}
+			}
+		}
+	}
+
+	cost = {
+		piety = 5000
+	}
+
+	effect = {
+		random_army = {
+			limit = {
+				location.barony = {
+					is_holy_site = yes
+					NOT = { is_holy_site_of = root.faith }
+				}
+			}
+			location.county = {
+				add_county_modifier = {
+					modifier = zz_holy_site_desecrated
+					years = 80
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
