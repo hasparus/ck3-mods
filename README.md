@@ -44,7 +44,7 @@ Three mods for Crusader Kings III 1.19.
 
 ![Burn the Infidel Holy Place decision banner](docs/banners/burn-the-infidel-holy-place.png)
 
-**Take the fight to their gods.** After the Vigil, a second decision unlocks. While your army stands on a holy site of another faith that you hold by right, hold by siege, or have just raided, you may burn it. The act grants another 5000 piety and leaves the county under a Desecrated Ground modifier for eighty years (-100% tax, -50% levy). The 5000 piety is the easy part; the holy war it earns you is not.
+**Take the fight to their gods.** After the Vigil, a second decision unlocks. While your army stands on a holy site of another faith that you hold by right, hold by siege, or have just raided, you may burn it. The act grants another 5000 piety and leaves the county under a Desecrated Ground modifier for eighty years (-100% tax, -50% levy).
 
 **Consequences.** An act like this does not go unanswered. The faith of the desecrated holy place takes notice. From your vassals and neighboring rulers of that faith, existing rivals are preferred:
 
