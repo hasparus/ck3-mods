@@ -76,6 +76,19 @@ crimson_bath.0001 = {
 			add_stress = minor_stress_loss
 		}
 
+		# 10% chance per sacrifice to fall into the Numb screen, but only
+		# for faiths that don't already bless ritual sacrifice.
+		if = {
+			limit = {
+				NOT = { has_trait = callous }
+				faith = { NOT = { has_doctrine = tenet_human_sacrifice } }
+			}
+			random = {
+				chance = 10
+				trigger_event = crimson_bath.0002
+			}
+		}
+
 		if = {
 			limit = { has_trait = infirm }
 			remove_trait = infirm
