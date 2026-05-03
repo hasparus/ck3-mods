@@ -33,6 +33,10 @@ crimson_bath.0001 = {
 			}
 			desc = crimson_bath.0001.desc.malady.withering_mind
 		}
+		triggered_desc = {
+			trigger = { has_trait = sadistic }
+			desc = crimson_bath.0001.desc.sadistic
+		}
 	}
 	theme = dread
 	override_background = { reference = dungeon }
@@ -85,14 +89,12 @@ crimson_bath.0001 = {
 
 		# 10% chance per sacrifice to fall into the Numb screen, but only
 		# for faiths that don't already bless ritual sacrifice, and only
-		# while at least one of callous / sadistic is still gainable.
+		# while root carries neither callous nor sadistic.
 		if = {
 			limit = {
-				NOT = {
-					AND = {
-						has_trait = callous
-						has_trait = sadistic
-					}
+				NOR = {
+					has_trait = callous
+					has_trait = sadistic
 				}
 				faith = { NOT = { has_doctrine = tenet_human_sacrifice } }
 			}
@@ -168,16 +170,7 @@ crimson_bath.0002 = {
 
 	option = {
 		name = crimson_bath.0002.a
-		random_list = {
-			50 = {
-				trigger = { NOT = { has_trait = callous } }
-				add_trait = callous
-			}
-			50 = {
-				trigger = { NOT = { has_trait = sadistic } }
-				add_trait = sadistic
-			}
-		}
+		add_trait = callous
 		add_stress = medium_stress_loss
 	}
 }
