@@ -16,4 +16,5 @@ crimson_bath_aftermath_effect = {
 			10 = { give_nickname = nick_the_pale }
 		}
 	}
+	remove_variable = crimson_bath_in_progress
 }

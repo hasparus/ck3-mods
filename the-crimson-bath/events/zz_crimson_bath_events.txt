@@ -9,22 +9,29 @@ crimson_bath.0001 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
+				trigger = { has_variable = crimson_bath_in_progress }
+				desc = crimson_bath.0001.desc.position.next
+			}
+			desc = crimson_bath.0001.desc.position.first
+		}
+		first_valid = {
+			triggered_desc = {
 				trigger = { has_trait = infirm }
-				desc = crimson_bath.0001.desc.infirm
+				desc = crimson_bath.0001.desc.malady.infirm
 			}
 			triggered_desc = {
 				trigger = { has_trait = clouded_eyes }
-				desc = crimson_bath.0001.desc.clouded_eyes
+				desc = crimson_bath.0001.desc.malady.clouded_eyes
 			}
 			triggered_desc = {
 				trigger = { has_trait = faltering_heart }
-				desc = crimson_bath.0001.desc.faltering_heart
+				desc = crimson_bath.0001.desc.malady.faltering_heart
 			}
 			triggered_desc = {
 				trigger = { has_trait = fragile_bones }
-				desc = crimson_bath.0001.desc.fragile_bones
+				desc = crimson_bath.0001.desc.malady.fragile_bones
 			}
-			desc = crimson_bath.0001.desc.withering_mind
+			desc = crimson_bath.0001.desc.malady.withering_mind
 		}
 	}
 	theme = dread
@@ -77,10 +84,16 @@ crimson_bath.0001 = {
 		}
 
 		# 10% chance per sacrifice to fall into the Numb screen, but only
-		# for faiths that don't already bless ritual sacrifice.
+		# for faiths that don't already bless ritual sacrifice, and only
+		# while at least one of callous / sadistic is still gainable.
 		if = {
 			limit = {
-				NOT = { has_trait = callous }
+				NOT = {
+					AND = {
+						has_trait = callous
+						has_trait = sadistic
+					}
+				}
 				faith = { NOT = { has_doctrine = tenet_human_sacrifice } }
 			}
 			random = {
@@ -88,6 +101,8 @@ crimson_bath.0001 = {
 				trigger_event = crimson_bath.0002
 			}
 		}
+
+		set_variable = { name = crimson_bath_in_progress }
 
 		if = {
 			limit = { has_trait = infirm }
@@ -153,7 +168,16 @@ crimson_bath.0002 = {
 
 	option = {
 		name = crimson_bath.0002.a
-		add_trait = callous
+		random_list = {
+			50 = {
+				trigger = { NOT = { has_trait = callous } }
+				add_trait = callous
+			}
+			50 = {
+				trigger = { NOT = { has_trait = sadistic } }
+				add_trait = sadistic
+			}
+		}
 		add_stress = medium_stress_loss
 	}
 }

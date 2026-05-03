@@ -16,11 +16,14 @@
 
  crimson_bath_kin_grief: "Bled my kin in the cellar"
 
- crimson_bath.0001.desc.infirm: "The first captive bleeds out into the basin. Their breath catches; yours does not. The wasting grip you have carried for years releases your bones, finger by finger, like something letting go in the dark."
- crimson_bath.0001.desc.clouded_eyes: "Another captive is led in. The blood runs warm and dark. The world that had gone milky at the edges sharpens again, and you see, for the first time in months, the grain of the wood and the coloured fibres in the linen."
- crimson_bath.0001.desc.faltering_heart: "Another. You feel it before you understand it: the irregular drum in your chest steadies, then steadies more, until what was a stuttering thing beats clean. You wonder how long it has been since you slept without listening for it."
- crimson_bath.0001.desc.fragile_bones: "The basin fills again. You step out of it without holding the rail. The knee that has clicked since childhood takes the weight in silence. You straighten, slowly, and a long ache leaves you that you had stopped noticing."
- crimson_bath.0001.desc.withering_mind: "Another captive, perhaps the last. The blood is cooling now. Names you had been losing return like coins from a cleared pocket: the names of nephews, of farms, of the books you read as a boy. The fog parts."
+ crimson_bath.0001.desc.position.first: "Behind sealed doors in the deepest cellar of your keep, the rite begins. The first captive is led to the iron table; the basin beneath fills slowly."
+ crimson_bath.0001.desc.position.next: "Another captive is led in. The basin below the iron table fills again."
+
+ crimson_bath.0001.desc.malady.infirm: "The wasting grip you have carried for years releases your bones, finger by finger, like something letting go in the dark."
+ crimson_bath.0001.desc.malady.clouded_eyes: "The world that had gone milky at the edges sharpens again. You see, for the first time in months, the grain of the wood and the coloured fibres in the linen."
+ crimson_bath.0001.desc.malady.faltering_heart: "You feel it before you understand it: the irregular drum in your chest steadies, then steadies more, until what was a stuttering thing beats clean. You wonder how long it has been since you slept without listening for it."
+ crimson_bath.0001.desc.malady.fragile_bones: "The knee that has clicked since childhood takes the weight in silence. You straighten, slowly, and a long ache leaves you that you had stopped noticing."
+ crimson_bath.0001.desc.malady.withering_mind: "Names you had been losing return like coins from a cleared pocket: the names of nephews, of farms, of the books you read as a boy. The fog parts."
 
  crimson_bath.0001.a: "Open the vein"
  crimson_bath.0001.b: "Stop the rite here"
