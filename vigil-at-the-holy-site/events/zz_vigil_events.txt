@@ -34,6 +34,10 @@ vigil_holy_site.0002 = {
 				OR = {
 					government_has_flag = government_is_theocracy
 					has_council_position = councillor_court_chaplain
+					has_trait = theologian
+					has_trait = devoted
+					has_trait = saint
+					has_trait = witch
 				}
 			}
 			order_by = learning
