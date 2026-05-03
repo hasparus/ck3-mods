@@ -1,9 +1,102 @@
 namespace = vigil_holy_site
 
-# Vigil at the Holy Site — confirmation window for the vigil decision.
+# Vigil at the Holy Site — first step: choose the officiant of the rite.
 vigil_holy_site.0002 = {
 	type = character_event
 	title = vigil_holy_site.0002.t
+	desc = vigil_holy_site.0002.desc
+	theme = faith
+	override_background = { reference = holy_site_generic }
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	right_portrait = {
+		trigger = { exists = scope:vigil_chaplain }
+		character = scope:vigil_chaplain
+		animation = personality_zealous
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:vigil_captive_priest }
+		character = scope:vigil_captive_priest
+		animation = shame
+	}
+
+	immediate = {
+		if = {
+			limit = { exists = cp:councillor_court_chaplain }
+			cp:councillor_court_chaplain = { save_scope_as = vigil_chaplain }
+		}
+		ordered_prisoner = {
+			limit = {
+				NOT = { faith = root.faith }
+				OR = {
+					government_has_flag = government_is_theocracy
+					has_council_position = councillor_court_chaplain
+				}
+			}
+			order_by = learning
+			save_scope_as = vigil_captive_priest
+		}
+	}
+
+	# Yourself
+	option = {
+		name = vigil_holy_site.0002.a
+		save_scope_as = vigil_officiant
+		add_stress = minor_stress_gain
+		trigger_event = vigil_holy_site.0003
+	}
+
+	# Court chaplain
+	option = {
+		name = vigil_holy_site.0002.b
+		trigger = {
+			exists = scope:vigil_chaplain
+			gold >= 50
+		}
+		scope:vigil_chaplain = { save_scope_as = vigil_officiant }
+		add_gold = -50
+		scope:vigil_chaplain = { add_gold = 50 }
+		stress_impact = { greedy = minor_stress_gain }
+		trigger_event = vigil_holy_site.0003
+	}
+
+	# Captive priest of a different faith
+	option = {
+		name = vigil_holy_site.0002.c
+		trigger = { exists = scope:vigil_captive_priest }
+		scope:vigil_captive_priest = { save_scope_as = vigil_officiant }
+		if = {
+			limit = {
+				OR = {
+					has_trait = sadistic
+					has_trait = arbitrary
+				}
+			}
+			add_stress = minor_stress_loss
+		}
+		else = {
+			random_list = {
+				15 = { add_trait = sadistic }
+				15 = { add_trait = arbitrary }
+				70 = {}
+			}
+		}
+		trigger_event = vigil_holy_site.0003
+	}
+
+	# Step away from the rite entirely.
+	option = {
+		name = vigil_holy_site.0002.d
+	}
+}
+
+# Vigil at the Holy Site — second step: choose the captive who will die.
+vigil_holy_site.0003 = {
+	type = character_event
+	title = vigil_holy_site.0003.t
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -44,10 +137,22 @@ vigil_holy_site.0002 = {
 
 	immediate = {
 		random_prisoner = {
+			limit = {
+				NOR = {
+					exists = scope:vigil_officiant
+					this = scope:vigil_officiant
+				}
+			}
 			save_scope_as = vigil_offering_a
 		}
 		random_prisoner = {
-			limit = { NOT = { this = scope:vigil_offering_a } }
+			limit = {
+				NOT = { this = scope:vigil_offering_a }
+				NOR = {
+					exists = scope:vigil_officiant
+					this = scope:vigil_officiant
+				}
+			}
 			save_scope_as = vigil_offering_b
 		}
 	}
@@ -58,21 +163,21 @@ vigil_holy_site.0002 = {
 				first_valid = {
 					triggered_desc = {
 						trigger = { faith = { religion_tag = germanic_religion } }
-						desc = vigil_holy_site.0002.a.norse
+						desc = vigil_holy_site.0003.a.norse
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = christianity_religion } }
-						desc = vigil_holy_site.0002.a.christian
+						desc = vigil_holy_site.0003.a.christian
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = islam_religion } }
-						desc = vigil_holy_site.0002.a.islamic
+						desc = vigil_holy_site.0003.a.islamic
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = tengri_religion } }
-						desc = vigil_holy_site.0002.a.tengri
+						desc = vigil_holy_site.0003.a.tengri
 					}
-					desc = vigil_holy_site.0002.a.default
+					desc = vigil_holy_site.0003.a.default
 				}
 			}
 		}
@@ -93,21 +198,21 @@ vigil_holy_site.0002 = {
 				first_valid = {
 					triggered_desc = {
 						trigger = { faith = { religion_tag = germanic_religion } }
-						desc = vigil_holy_site.0002.b.norse
+						desc = vigil_holy_site.0003.b.norse
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = christianity_religion } }
-						desc = vigil_holy_site.0002.b.christian
+						desc = vigil_holy_site.0003.b.christian
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = islam_religion } }
-						desc = vigil_holy_site.0002.b.islamic
+						desc = vigil_holy_site.0003.b.islamic
 					}
 					triggered_desc = {
 						trigger = { faith = { religion_tag = tengri_religion } }
-						desc = vigil_holy_site.0002.b.tengri
+						desc = vigil_holy_site.0003.b.tengri
 					}
-					desc = vigil_holy_site.0002.b.default
+					desc = vigil_holy_site.0003.b.default
 				}
 			}
 		}
@@ -124,7 +229,7 @@ vigil_holy_site.0002 = {
 	}
 
 	option = {
-		name = vigil_holy_site.0002.c
+		name = vigil_holy_site.0003.c
 	}
 }
 
