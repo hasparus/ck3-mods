@@ -42,6 +42,13 @@ crimson_bath_decision = {
 			}
 			random_prisoner = {
 				limit = { age < 30 }
+				every_close_family_member = {
+					add_opinion = {
+						modifier = crimson_bath_kin_grief
+						target = root
+						years = 15
+					}
+				}
 				death = {
 					killer = root
 					reason = death_sacrificed
@@ -56,6 +63,13 @@ crimson_bath_decision = {
 			}
 			random_prisoner = {
 				limit = { age < 30 }
+				every_close_family_member = {
+					add_opinion = {
+						modifier = crimson_bath_kin_grief
+						target = root
+						years = 15
+					}
+				}
 				death = {
 					killer = root
 					reason = death_sacrificed
@@ -70,6 +84,13 @@ crimson_bath_decision = {
 			}
 			random_prisoner = {
 				limit = { age < 30 }
+				every_close_family_member = {
+					add_opinion = {
+						modifier = crimson_bath_kin_grief
+						target = root
+						years = 15
+					}
+				}
 				death = {
 					killer = root
 					reason = death_sacrificed
@@ -84,6 +105,13 @@ crimson_bath_decision = {
 			}
 			random_prisoner = {
 				limit = { age < 30 }
+				every_close_family_member = {
+					add_opinion = {
+						modifier = crimson_bath_kin_grief
+						target = root
+						years = 15
+					}
+				}
 				death = {
 					killer = root
 					reason = death_sacrificed
@@ -98,6 +126,13 @@ crimson_bath_decision = {
 			}
 			random_prisoner = {
 				limit = { age < 30 }
+				every_close_family_member = {
+					add_opinion = {
+						modifier = crimson_bath_kin_grief
+						target = root
+						years = 15
+					}
+				}
 				death = {
 					killer = root
 					reason = death_sacrificed

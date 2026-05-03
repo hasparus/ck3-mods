@@ -1,0 +1,4 @@
+crimson_bath_kin_grief = {
+	opinion = -50
+	stacking = yes
+}

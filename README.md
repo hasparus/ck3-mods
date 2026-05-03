@@ -8,6 +8,8 @@ Three mods for Crusader Kings III 1.19.
 
 A decision for an aged ruler with young captives. Each old-age malady (infirm, clouded eyes, faltering heart, fragile bones, withering mind) costs one prisoner under thirty. The rite brands the doer a witch and adds stress. Five-year cooldown.
 
+**Consequences.** Every close family member of each sacrificed captive carries a -50 grief opinion against you for fifteen years; the penalty stacks if you take more than one of their blood.
+
 ## eclectic-traditions
 
 > This people gather wisdom from every road that crosses their lands. Foreign sages are welcomed at the high table; merchants are pressed for stories of distant rites; the children grow up speaking of customs their grandparents would have called heresy. No single way is held above all others, and so all ways are theirs to keep.
