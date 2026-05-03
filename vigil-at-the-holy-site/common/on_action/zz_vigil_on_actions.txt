@@ -1,0 +1,17 @@
+on_raid_action_completion = {
+	on_actions = {
+		vigil_record_last_raider
+	}
+}
+
+vigil_record_last_raider = {
+	effect = {
+		scope:barony = {
+			set_variable = {
+				name = vigil_last_raider
+				value = scope:raider
+				years = 1
+			}
+		}
+	}
+}
