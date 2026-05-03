@@ -14,6 +14,12 @@ zz_holy_site_vigil_decision = {
 
 	is_valid = {
 		custom_tooltip = {
+			text = zz_holy_site_vigil_requires_holy_site_tt
+			any_sub_realm_barony = {
+				is_holy_site_of = root.faith
+			}
+		}
+		custom_tooltip = {
 			text = zz_holy_site_vigil_requires_prisoner_tt
 			any_prisoner = { count >= 1 }
 		}

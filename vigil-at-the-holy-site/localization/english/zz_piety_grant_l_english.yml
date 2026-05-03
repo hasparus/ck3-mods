@@ -9,6 +9,7 @@
  zz_holy_site_vigil_decision_tengri_desc: "You ride alone to the highest peak with a captive in chains. Beneath the Eternal Blue Sky, their blood is given to the wind and the eagles. You return lean and brittle, with a hardness in your eye."
  zz_holy_site_vigil_decision_default_desc: "You set aside the cares of rule for the divine. A captive from your dungeons is given over to the rites your faith demands. When you return, the world is unchanged but you are not."
 
+ zz_holy_site_vigil_requires_holy_site_tt: "Your realm contains a holy site of your faith"
  zz_holy_site_vigil_requires_prisoner_tt: "You hold at least one captive in your dungeons"
 
  zz_holy_site_desecration_decision: "Burn the Infidel Holy Place"
