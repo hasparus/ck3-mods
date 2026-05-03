@@ -53,7 +53,33 @@ vigil_holy_site.0002 = {
 	}
 
 	option = {
-		name = vigil_holy_site.0002.a
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { NOT = { exists = scope:vigil_offering_b } }
+						desc = vigil_holy_site.0002.a.single
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = germanic_religion } }
+						desc = vigil_holy_site.0002.a.norse
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = christianity_religion } }
+						desc = vigil_holy_site.0002.a.christian
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = islam_religion } }
+						desc = vigil_holy_site.0002.a.islamic
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = tengri_religion } }
+						desc = vigil_holy_site.0002.a.tengri
+					}
+					desc = vigil_holy_site.0002.a.default
+				}
+			}
+		}
 
 		scope:vigil_offering_a = {
 			death = {
@@ -66,7 +92,29 @@ vigil_holy_site.0002 = {
 	}
 
 	option = {
-		name = vigil_holy_site.0002.b
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { faith = { religion_tag = germanic_religion } }
+						desc = vigil_holy_site.0002.b.norse
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = christianity_religion } }
+						desc = vigil_holy_site.0002.b.christian
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = islam_religion } }
+						desc = vigil_holy_site.0002.b.islamic
+					}
+					triggered_desc = {
+						trigger = { faith = { religion_tag = tengri_religion } }
+						desc = vigil_holy_site.0002.b.tengri
+					}
+					desc = vigil_holy_site.0002.b.default
+				}
+			}
+		}
 		trigger = { exists = scope:vigil_offering_b }
 
 		scope:vigil_offering_b = {
