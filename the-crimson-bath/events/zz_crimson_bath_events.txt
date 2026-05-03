@@ -1,10 +1,32 @@
 namespace = crimson_bath
 
-# The Crimson Bath — confirmation window for the rite.
+# The Crimson Bath — one screen per captive, one captive per malady.
+# Recurses on itself until either the maladies or the eligible captives
+# run out, then triggers the aftermath via a shared scripted effect.
 crimson_bath.0001 = {
 	type = character_event
 	title = crimson_bath_decision
-	desc = crimson_bath_decision_desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_trait = infirm }
+				desc = crimson_bath.0001.desc.infirm
+			}
+			triggered_desc = {
+				trigger = { has_trait = clouded_eyes }
+				desc = crimson_bath.0001.desc.clouded_eyes
+			}
+			triggered_desc = {
+				trigger = { has_trait = faltering_heart }
+				desc = crimson_bath.0001.desc.faltering_heart
+			}
+			triggered_desc = {
+				trigger = { has_trait = fragile_bones }
+				desc = crimson_bath.0001.desc.fragile_bones
+			}
+			desc = crimson_bath.0001.desc.withering_mind
+		}
+	}
 	theme = dread
 	override_background = { reference = dungeon }
 
@@ -25,132 +47,100 @@ crimson_bath.0001 = {
 		}
 	}
 
+	# Open the vein on this captive: kill, kin grief, remove one malady,
+	# stress relief if callous or sadistic, then recurse or finish.
 	option = {
-		name = crimson_bath_decision_confirm
+		name = crimson_bath.0001.a
+
+		scope:crimson_bath_offering = {
+			every_close_family_member = {
+				add_opinion = {
+					modifier = crimson_bath_kin_grief
+					target = root
+					years = 15
+				}
+			}
+			death = {
+				killer = root
+				reason = death_sacrificed
+			}
+		}
 
 		if = {
 			limit = {
-				has_trait = infirm
-				any_prisoner = { count >= 1 age < 30 }
-			}
-			random_prisoner = {
-				limit = { age < 30 }
-				every_close_family_member = {
-					add_opinion = {
-						modifier = crimson_bath_kin_grief
-						target = root
-						years = 15
-					}
-				}
-				death = {
-					killer = root
-					reason = death_sacrificed
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
 				}
 			}
+			add_stress = minor_stress_loss
+		}
+
+		if = {
+			limit = { has_trait = infirm }
 			remove_trait = infirm
 		}
-		if = {
-			limit = {
-				has_trait = clouded_eyes
-				any_prisoner = { count >= 1 age < 30 }
-			}
-			random_prisoner = {
-				limit = { age < 30 }
-				every_close_family_member = {
-					add_opinion = {
-						modifier = crimson_bath_kin_grief
-						target = root
-						years = 15
-					}
-				}
-				death = {
-					killer = root
-					reason = death_sacrificed
-				}
-			}
+		else_if = {
+			limit = { has_trait = clouded_eyes }
 			remove_trait = clouded_eyes
 		}
-		if = {
-			limit = {
-				has_trait = faltering_heart
-				any_prisoner = { count >= 1 age < 30 }
-			}
-			random_prisoner = {
-				limit = { age < 30 }
-				every_close_family_member = {
-					add_opinion = {
-						modifier = crimson_bath_kin_grief
-						target = root
-						years = 15
-					}
-				}
-				death = {
-					killer = root
-					reason = death_sacrificed
-				}
-			}
+		else_if = {
+			limit = { has_trait = faltering_heart }
 			remove_trait = faltering_heart
 		}
-		if = {
-			limit = {
-				has_trait = fragile_bones
-				any_prisoner = { count >= 1 age < 30 }
-			}
-			random_prisoner = {
-				limit = { age < 30 }
-				every_close_family_member = {
-					add_opinion = {
-						modifier = crimson_bath_kin_grief
-						target = root
-						years = 15
-					}
-				}
-				death = {
-					killer = root
-					reason = death_sacrificed
-				}
-			}
+		else_if = {
+			limit = { has_trait = fragile_bones }
 			remove_trait = fragile_bones
 		}
-		if = {
-			limit = {
-				has_trait = withering_mind
-				any_prisoner = { count >= 1 age < 30 }
-			}
-			random_prisoner = {
-				limit = { age < 30 }
-				every_close_family_member = {
-					add_opinion = {
-						modifier = crimson_bath_kin_grief
-						target = root
-						years = 15
-					}
-				}
-				death = {
-					killer = root
-					reason = death_sacrificed
-				}
-			}
+		else_if = {
+			limit = { has_trait = withering_mind }
 			remove_trait = withering_mind
 		}
+
 		if = {
-			limit = { NOT = { has_trait = witch } }
-			give_witch_secret_or_trait_effect = yes
-		}
-		add_stress = minor_stress_gain
-		if = {
-			limit = { has_any_nickname = no }
-			random_list = {
-				50 = { give_nickname = nick_the_vampire }
-				15 = { give_nickname = nick_the_red }
-				15 = { give_nickname = nick_the_strigoi }
-				10 = { give_nickname = nick_the_undying }
-				10 = { give_nickname = nick_the_pale }
+			limit = {
+				OR = {
+					has_trait = infirm
+					has_trait = clouded_eyes
+					has_trait = faltering_heart
+					has_trait = fragile_bones
+					has_trait = withering_mind
+				}
+				any_prisoner = { count >= 1 age < 30 }
 			}
+			trigger_event = crimson_bath.0001
+		}
+		else = {
+			crimson_bath_aftermath_effect = yes
 		}
 	}
 
+	# Stop the rite here: no more sacrifices, but the maladies already
+	# undone stay undone and the aftermath still lands.
 	option = {
 		name = crimson_bath.0001.b
+		crimson_bath_aftermath_effect = yes
+	}
+}
+
+# The Numb — short follow-up that fires with 10% chance after the
+# rite if root is not already callous. Grants the trait and meaningful
+# stress relief.
+crimson_bath.0002 = {
+	type = character_event
+	title = crimson_bath.0002.t
+	desc = crimson_bath.0002.desc
+	theme = dread
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = personality_callous
+	}
+
+	option = {
+		name = crimson_bath.0002.a
+		add_trait = callous
+		add_stress = medium_stress_loss
 	}
 }

@@ -1,0 +1,27 @@
+# Shared aftermath for the Crimson Bath: witch branding, the closing
+# stress, the nickname roll, and a 10% chance to land in the Numb
+# follow-up if root is not yet callous.
+crimson_bath_aftermath_effect = {
+	if = {
+		limit = { NOT = { has_trait = witch } }
+		give_witch_secret_or_trait_effect = yes
+	}
+	add_stress = minor_stress_gain
+	if = {
+		limit = { has_any_nickname = no }
+		random_list = {
+			50 = { give_nickname = nick_the_vampire }
+			15 = { give_nickname = nick_the_red }
+			15 = { give_nickname = nick_the_strigoi }
+			10 = { give_nickname = nick_the_undying }
+			10 = { give_nickname = nick_the_pale }
+		}
+	}
+	if = {
+		limit = { NOT = { has_trait = callous } }
+		random = {
+			chance = 10
+			trigger_event = crimson_bath.0002
+		}
+	}
+}
