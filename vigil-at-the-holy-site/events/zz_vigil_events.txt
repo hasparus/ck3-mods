@@ -181,4 +181,8 @@ vigil_holy_site.0001 = {
 			}
 		}
 	}
+
+	option = {
+		name = vigil_holy_site.0001.b
+	}
 }
