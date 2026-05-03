@@ -141,7 +141,7 @@ zz_holy_site_desecration_decision = {
 				faith = scope:vigil_harmed_faith
 				is_landed = yes
 			}
-			order_by = martial
+			order_by = max_military_strength
 			save_scope_as = vigil_avenger
 		}
 		ordered_neighboring_top_liege_realm_owner = {
@@ -149,10 +149,10 @@ zz_holy_site_desecration_decision = {
 				faith = scope:vigil_harmed_faith
 				OR = {
 					NOT = { exists = scope:vigil_avenger }
-					martial > scope:vigil_avenger.martial
+					max_military_strength > scope:vigil_avenger.max_military_strength
 				}
 			}
-			order_by = martial
+			order_by = max_military_strength
 			save_scope_as = vigil_avenger
 		}
 

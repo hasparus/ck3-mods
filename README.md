@@ -25,6 +25,6 @@ After the Vigil, a second decision unlocks: while your army stands on a holy sit
 **Consequences.** An act like this does not go unanswered. The faith of the desecrated holy place takes notice:
 
 - The most cunning believer among your vassals and neighbors (highest intrigue) becomes your rival and starts a murder scheme against you.
-- The most martial landed believer among them becomes your rival and declares a Punitive War. The war has no territorial goal: their warscore is your captivity. On their victory, you are dragged in chains to their dungeon.
+- The strongest landed believer among them (highest max military strength, so a child emperor still counts) becomes your rival and declares a Punitive War. The war has no territorial goal: their warscore is your captivity. On their victory, you are dragged in chains to their dungeon.
 - If the holy place you desecrated lay inside your own realm, the Punitive War also reclaims its de jure duchy on your defeat.
-- If the same character is both the most cunning and the most martial, they take both roles, plotting and warring at once.
+- If the same character is both the most cunning and the strongest, they take both roles, plotting and warring at once.
