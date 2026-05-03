@@ -28,8 +28,9 @@
  rival_zz_holy_site_desecrated: "Desecrated a holy place of #L my faith#!"
 
  vigil_holy_site.0002.t: "Vigil at the Holy Site"
- vigil_holy_site.0002.a: "Begin the vigil"
- vigil_holy_site.0002.b: "Spare them"
+ vigil_holy_site.0002.a: "Bind [scope:vigil_offering_a.GetShortUINameNoTooltipNoFormat|U] to the altar"
+ vigil_holy_site.0002.b: "Bind [scope:vigil_offering_b.GetShortUINameNoTooltipNoFormat|U] to the altar instead"
+ vigil_holy_site.0002.c: "Spare them"
 
  vigil_holy_site.0001.t: "Burn the Infidel Holy Place"
  vigil_holy_site.0001.desc: "Your soldiers do not march and your priests do not pray. Pitch and torch are brought to the holy place; whatever can be torn down will be torn down, and whatever cannot will be fouled. By dawn you will leave ash and rubble behind you. The peasants who creep back to this ground will speak of it for generations."

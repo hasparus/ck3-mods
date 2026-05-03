@@ -33,20 +33,29 @@ vigil_holy_site.0002 = {
 		animation = personality_zealous
 	}
 	right_portrait = {
-		character = scope:vigil_offering
+		character = scope:vigil_offering_a
+		animation = shame
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:vigil_offering_b }
+		character = scope:vigil_offering_b
 		animation = shame
 	}
 
 	immediate = {
 		random_prisoner = {
-			save_scope_as = vigil_offering
+			save_scope_as = vigil_offering_a
+		}
+		random_prisoner = {
+			limit = { NOT = { this = scope:vigil_offering_a } }
+			save_scope_as = vigil_offering_b
 		}
 	}
 
 	option = {
 		name = vigil_holy_site.0002.a
 
-		scope:vigil_offering = {
+		scope:vigil_offering_a = {
 			death = {
 				killer = root
 				reason = death_sacrificed
@@ -58,6 +67,20 @@ vigil_holy_site.0002 = {
 
 	option = {
 		name = vigil_holy_site.0002.b
+		trigger = { exists = scope:vigil_offering_b }
+
+		scope:vigil_offering_b = {
+			death = {
+				killer = root
+				reason = death_sacrificed
+			}
+		}
+		add_piety = 5000
+		set_global_variable = zz_holy_site_vigil_done
+	}
+
+	option = {
+		name = vigil_holy_site.0002.c
 	}
 }
 
