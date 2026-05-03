@@ -18,4 +18,6 @@ A societal tradition. It raises the tradition cap, speeds cultural acceptance, a
 
 > You set aside the cares of rule for the divine. A captive from your dungeons is given over to the rites your faith demands. When you return, the world is unchanged but you are not.
 
-A once-per-game decision. Sacrifice a captive; receive ten thousand piety. The flavor adapts to your faith: Norse, Christian, Islamic, Tengri, or generic.
+A once-per-game decision. Sacrifice a captive; receive five thousand piety. The flavor adapts to your faith: Norse, Christian, Islamic, Tengri, or generic.
+
+After the Vigil, a second decision unlocks: while your army stands on a holy site of another faith, you may burn and desecrate it. The act grants another five thousand piety and leaves the county under a Desecrated Ground modifier for eighty years (-100% tax, -50% levy).

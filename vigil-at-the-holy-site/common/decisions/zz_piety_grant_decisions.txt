@@ -84,10 +84,6 @@ zz_holy_site_desecration_decision = {
 		}
 	}
 
-	cost = {
-		piety = 5000
-	}
-
 	effect = {
 		random_army = {
 			limit = {
@@ -103,6 +99,7 @@ zz_holy_site_desecration_decision = {
 				}
 			}
 		}
+		add_piety = 5000
 	}
 
 	ai_will_do = {
