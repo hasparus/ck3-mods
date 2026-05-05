@@ -448,6 +448,7 @@ vigil_holy_site.0001 = {
 		name = vigil_holy_site.0001.a
 
 		scope:vigil_desecrated_county = {
+			set_variable = { name = desecrator value = root }
 			add_county_modifier = {
 				modifier = zz_holy_site_desecrated
 				years = 80

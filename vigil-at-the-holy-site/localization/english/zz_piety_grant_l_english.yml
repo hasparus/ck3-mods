@@ -24,7 +24,7 @@
  zz_holy_site_desecration_requires_army_tt: "Your army stands on a holy site of a faith other than yours that you hold by right, by siege, or have just raided"
 
  zz_holy_site_desecrated: "Desecrated Ground"
- zz_holy_site_desecrated_desc: "The holy place was burned and fouled by foreign troops. The land will not recover for generations."
+ zz_holy_site_desecrated_desc: "The holy place was burned and fouled by [county.var:desecrator.GetTitledFirstName]. The land will not recover for generations."
 
  zz_punitive_war_cb: "Punitive War"
  ZZ_PUNITIVE_WAR_NAME: "$ATTACKER$'s Punitive War against $DEFENDER$"
