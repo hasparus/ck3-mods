@@ -34,7 +34,7 @@ Three mods for Crusader Kings III 1.19.
 
 > You set aside the cares of rule for the divine. A captive from your dungeons is given over to the rites your faith demands. When you return, the world is unchanged but you are not.
 
-**A piety pump with character.** Reforming or creating a faith stalls on piety income. The Vigil hands you 5000 piety in one go, with no kingdom requirement and no waiting for fervor to settle, but it costs more than gold: a once-per-game decision plays out across three screens of real choice.
+**A piety pump with character.** Reforming or creating a faith stalls on piety income. The Vigil hands you 5000 piety in one go, with no kingdom requirement and no waiting for fervor to settle, but it costs more than gold: a once-per-dynasty decision plays out across three screens of real choice.
 
 1. **Choose your officiant.** Yourself (stress), your court chaplain (50 gold passed to them; stress only if you are greedy), or a captured priest of a hostile faith (chance to gain sadistic or arbitrary; stress relief if you already are). The captive-priest option requires the captive to hold the court chaplain post, rule a theocracy, or carry the theologian, devoted, saint, or witch trait.
 2. **Pick the captive.** If you hold more than one captive young enough, choose between two. The rite is faith-flavored: Norse harrow, Christian pyre, Islamic blade, Tengri peak, or generic altar.

@@ -3,13 +3,35 @@ zz_holy_site_vigil_decision = {
 		reference = "gfx/interface/illustrations/decisions/zz_holy_site_vigil_decision.dds"
 	}
 
-	decision_group_type = minor
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { faith = { religion_tag = germanic_religion } }
+				desc = zz_holy_site_vigil_decision_norse_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = christianity_religion } }
+				desc = zz_holy_site_vigil_decision_christian_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = islam_religion } }
+				desc = zz_holy_site_vigil_decision_islamic_desc
+			}
+			triggered_desc = {
+				trigger = { faith = { religion_tag = tengri_religion } }
+				desc = zz_holy_site_vigil_decision_tengri_desc
+			}
+			desc = zz_holy_site_vigil_decision_default_desc
+		}
+	}
+
+	decision_group_type = questionable_decisions
 
 	ai_check_interval = 0
 
 	is_shown = {
 		is_ai = no
-		NOT = { has_global_variable = zz_holy_site_vigil_done }
+		NOT = { dynasty = { has_variable = holy_site_vigil_done } }
 	}
 
 	is_valid = {
@@ -26,6 +48,10 @@ zz_holy_site_vigil_decision = {
 	}
 
 	effect = {
+		show_as_tooltip = {
+			add_piety = 5000
+		}
+		custom_tooltip = zz_holy_site_vigil_decision_effect_tt
 		trigger_event = vigil_holy_site.0002
 	}
 
@@ -39,13 +65,13 @@ zz_holy_site_desecration_decision = {
 		reference = "gfx/interface/illustrations/decisions/zz_holy_site_desecration_decision.dds"
 	}
 
-	decision_group_type = minor
+	decision_group_type = questionable_decisions
 
 	ai_check_interval = 0
 
 	is_shown = {
 		is_ai = no
-		has_global_variable = zz_holy_site_vigil_done
+		dynasty = { has_variable = holy_site_vigil_done }
 	}
 
 	is_valid = {
@@ -70,6 +96,10 @@ zz_holy_site_desecration_decision = {
 	}
 
 	effect = {
+		show_as_tooltip = {
+			add_piety = 5000
+		}
+		custom_tooltip = zz_holy_site_desecration_decision_effect_tt
 		trigger_event = vigil_holy_site.0001
 	}
 

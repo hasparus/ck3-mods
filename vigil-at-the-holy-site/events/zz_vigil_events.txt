@@ -6,6 +6,18 @@ vigil_holy_site.0002 = {
 	title = vigil_holy_site.0002.t
 	desc = vigil_holy_site.0002.desc
 	theme = faith
+	override_background = {
+		trigger = { faith = { religion_tag = christianity_religion } }
+		reference = temple_church
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = islam_religion } }
+		reference = temple_mosque
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = tengri_religion } }
+		reference = mpo_temple_steppe
+	}
 	override_background = { reference = holy_site_generic }
 
 	left_portrait = {
@@ -123,6 +135,18 @@ vigil_holy_site.0003 = {
 		}
 	}
 	theme = faith
+	override_background = {
+		trigger = { faith = { religion_tag = christianity_religion } }
+		reference = temple_church
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = islam_religion } }
+		reference = temple_mosque
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = tengri_religion } }
+		reference = mpo_temple_steppe
+	}
 	override_background = { reference = holy_site_generic }
 
 	left_portrait = {
@@ -193,7 +217,7 @@ vigil_holy_site.0003 = {
 			}
 		}
 		add_piety = 5000
-		set_global_variable = zz_holy_site_vigil_done
+		dynasty = { set_variable = holy_site_vigil_done }
 		trigger_event = vigil_holy_site.0004
 	}
 
@@ -230,7 +254,7 @@ vigil_holy_site.0003 = {
 			}
 		}
 		add_piety = 5000
-		set_global_variable = zz_holy_site_vigil_done
+		dynasty = { set_variable = holy_site_vigil_done }
 		trigger_event = vigil_holy_site.0004
 	}
 
@@ -262,6 +286,18 @@ vigil_holy_site.0004 = {
 		}
 	}
 	theme = faith
+	override_background = {
+		trigger = { faith = { religion_tag = christianity_religion } }
+		reference = temple_church
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = islam_religion } }
+		reference = temple_mosque
+	}
+	override_background = {
+		trigger = { faith = { religion_tag = tengri_religion } }
+		reference = mpo_temple_steppe
+	}
 	override_background = { reference = holy_site_generic }
 
 	left_portrait = {

@@ -3,7 +3,7 @@ eclectic_traditions_decision = {
 		reference = "gfx/interface/illustrations/decisions/eclectic_traditions_decision.dds"
 	}
 
-	decision_group_type = major
+	decision_group_type = questionable_decisions
 
 	is_shown = {
 		is_ai = no
@@ -26,6 +26,20 @@ eclectic_traditions_decision = {
 	}
 
 	effect = {
+		show_as_tooltip = {
+			root.culture = {
+				add_culture_tradition = eclectic_traditions
+			}
+			every_vassal = {
+				limit = { culture = root.culture }
+				add_opinion = {
+					modifier = eclectic_traditions_betrayed
+					target = root
+					years = 5
+				}
+			}
+		}
+		custom_tooltip = eclectic_traditions_decision_effect_tt
 		trigger_event = eclectic.0001
 	}
 }

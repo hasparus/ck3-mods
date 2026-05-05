@@ -3,7 +3,7 @@ crimson_bath_decision = {
 		reference = "gfx/interface/illustrations/decisions/crimson_bath_decision.dds"
 	}
 
-	decision_group_type = minor
+	decision_group_type = questionable_decisions
 
 	ai_check_interval = 0
 
@@ -35,6 +35,7 @@ crimson_bath_decision = {
 	cooldown = { years = 5 }
 
 	effect = {
+		custom_tooltip = crimson_bath_decision_effect_tt
 		trigger_event = crimson_bath.0001
 	}
 
