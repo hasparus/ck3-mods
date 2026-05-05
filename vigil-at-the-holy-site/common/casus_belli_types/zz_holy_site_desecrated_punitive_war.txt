@@ -1,4 +1,4 @@
-zz_punitive_war_cb = {
+zz_holy_site_desecrated_punitive_war_cb = {
 	icon = invasion
 	group = invasion
 
@@ -22,7 +22,7 @@ zz_punitive_war_cb = {
 	}
 
 	on_victory_desc = {
-		desc = zz_punitive_war_victory_desc
+		desc = zz_holy_site_desecrated_punitive_war_victory_desc
 	}
 
 	on_victory = {
@@ -75,7 +75,7 @@ zz_punitive_war_cb = {
 	on_primary_defender_death = inherit
 	transfer_behavior = transfer
 
-	war_name = "ZZ_PUNITIVE_WAR_NAME"
+	war_name = "ZZ_HOLY_SITE_DESECRATED_PUNITIVE_WAR_NAME"
 
 	interface_priority = 80
 

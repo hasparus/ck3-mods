@@ -573,7 +573,7 @@ vigil_holy_site.0001 = {
 					}
 				}
 				start_war = {
-					casus_belli = zz_punitive_war_cb
+					casus_belli = zz_holy_site_desecrated_punitive_war_cb
 					target = root
 				}
 			}

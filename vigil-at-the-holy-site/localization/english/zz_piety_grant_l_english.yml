@@ -26,11 +26,11 @@
  zz_holy_site_desecrated: "Desecrated Ground"
  zz_holy_site_desecrated_desc: "The holy place was burned and fouled by [county.var:desecrator.GetTitledFirstName]. The land will not recover for generations."
 
- zz_punitive_war_cb: "Punitive War"
- ZZ_PUNITIVE_WAR_NAME: "$ATTACKER$'s Punitive War against $DEFENDER$"
- zz_punitive_war_victory_desc: "$ATTACKER$ has avenged the desecrated holy place. $DEFENDER$ is dragged in chains to the victor's dungeon."
+ zz_holy_site_desecrated_punitive_war_cb: "Punitive War"
+ ZZ_HOLY_SITE_DESECRATED_PUNITIVE_WAR_NAME: "$ATTACKER$'s Punitive War against $DEFENDER$"
+ zz_holy_site_desecrated_punitive_war_victory_desc: "$ATTACKER$ has avenged the desecrated holy place. $DEFENDER$ is dragged in chains to the victor's dungeon."
 
- rival_zz_holy_site_desecrated: "Desecrated a holy place of #L my faith#!"
+ rival_zz_holy_site_desecrated: "Desecrated a holy place of my faith"
 
  vigil_holy_site.0002.t: "Vigil at the Holy Site"
  vigil_holy_site.0002.desc: "The hour approaches. The captives have been led from your dungeons; the holy place stands ready. One question remains before the knife is drawn: whose hand will hold it?"
