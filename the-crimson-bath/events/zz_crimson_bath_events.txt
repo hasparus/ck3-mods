@@ -110,6 +110,14 @@ crimson_bath.0001 = {
 			remove_trait = withering_mind
 		}
 
+		# Track maladies undone across all baths. On the tenth, schedule the
+		# transformation event ten years out.
+		change_variable = { name = crimson_bath_heals_count add = 1 }
+		if = {
+			limit = { var:crimson_bath_heals_count = 10 }
+			trigger_event = { id = crimson_bath.0003 years = 10 }
+		}
+
 		# 10% chance per sacrifice to interrupt with the Numb screen, but only
 		# for faiths that don't already bless ritual sacrifice, and only while
 		# root carries neither callous nor sadistic. The Numb screen lands
@@ -162,4 +170,76 @@ crimson_bath.0002 = {
 		add_stress = medium_stress_loss
 		crimson_bath_continue_or_finish_effect = yes
 	}
+}
+
+# Ten captives bled, ten years on. The body has been remade, and the long
+# wait has been paid for in the night. Each option is the player learning
+# what they have been doing without choosing it; the kill or the modifier
+# is where the count fell.
+crimson_bath.0003 = {
+	type = character_event
+	title = crimson_bath.0003.t
+	desc = crimson_bath.0003.desc
+	theme = dread
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		trigger = { exists = scope:crimson_bath_corridor_victim }
+		character = scope:crimson_bath_corridor_victim
+		animation = personality_compassionate
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				NOT = { this = root.capital_county }
+			}
+			save_scope_as = crimson_bath_village
+		}
+		random_courtier = {
+			limit = {
+				is_adult = yes
+				is_landed = no
+			}
+			save_scope_as = crimson_bath_corridor_victim
+		}
+	}
+
+	# Did I prowl in [village]?
+	option = {
+		name = crimson_bath.0003.a
+		trigger = {
+			exists = scope:crimson_bath_village
+		}
+		scope:crimson_bath_village = {
+			add_county_modifier = {
+				modifier = crimson_bath_hunting_grounds
+				years = 10
+			}
+		}
+		add_trait = strong
+		add_trait = albino
+	}
+
+	# Have I visited [name] last night?
+	option = {
+		name = crimson_bath.0003.b
+		trigger = {
+			exists = scope:crimson_bath_corridor_victim
+		}
+		scope:crimson_bath_corridor_victim = {
+			death = {
+				killer = root
+				reason = death_murder_known
+			}
+		}
+		add_trait = strong
+		add_trait = albino
+	}
+
 }

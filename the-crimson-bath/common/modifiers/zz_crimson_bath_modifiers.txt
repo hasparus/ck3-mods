@@ -1,0 +1,5 @@
+crimson_bath_hunting_grounds = {
+	icon = outdoors_negative
+	levy_size = -0.25
+	tax_mult = -0.25
+}

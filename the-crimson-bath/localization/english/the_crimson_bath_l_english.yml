@@ -35,3 +35,11 @@
  crimson_bath.0002.t: "Numb"
  crimson_bath.0002.desc: "The basin is emptied and refilled. You watch the next captive bound to the table without the old tightness in your chest. Whatever was once in you that flinched, it does not flinch any more."
  crimson_bath.0002.a: "So be it"
+
+ crimson_bath.0003.t: "What You Have Become"
+ crimson_bath.0003.desc: "Ten years since the tenth captive bled out at the iron table. Standing at the high window today, you saw your reflection in the polished glass and did not, for a moment, know yourself.\n\nThe colour is gone from your hair and skin. A weird strength is coursing through your veins. You feel sated."
+ crimson_bath.0003.a: "Did I prowl in [crimson_bath_village.GetName]?"
+ crimson_bath.0003.b: "Have I visited [crimson_bath_corridor_victim.GetFirstName] last night?"
+
+ crimson_bath_hunting_grounds: "Hunting Grounds"
+ crimson_bath_hunting_grounds_desc: "Something has been taking from this place in the night. The villagers do not speak of it. The reeve cannot collect what has not been earned."
