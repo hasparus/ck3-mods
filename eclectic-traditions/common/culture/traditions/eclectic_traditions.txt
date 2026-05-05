@@ -17,7 +17,7 @@ eclectic_traditions = {
 	}
 
 	can_pick = {
-		always = yes
+		always = no
 	}
 
 	can_pick_for_hybridization = {

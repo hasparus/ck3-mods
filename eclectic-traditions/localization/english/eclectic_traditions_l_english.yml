@@ -1,12 +1,12 @@
 ﻿l_english:
  decision_group_type_questionable_decisions: "Questionable Decisions"
  eclectic_traditions_name: "Eclectic Traditions"
- eclectic_traditions_desc: "This people gather wisdom from every road that crosses their lands. Foreign sages are welcomed at the high table; merchants are pressed for stories of distant rites; the children grow up speaking of customs their grandparents would have called heresy. No single way is held above all others, and so all ways are theirs to keep."
+ eclectic_traditions_desc: "This people gather wisdom from every road that crosses their lands. Foreign sages are welcomed at the high table; merchants are pressed for stories of distant customs; the children grow up speaking of customs their grandparents would have called heresy. No single way is held above all others, and so all ways are theirs to keep."
 
  eclectic_traditions_decision: "Open the Hall to Foreign Customs"
  eclectic_traditions_decision_tooltip: "Welcome scholars, merchants, and holy men of every tongue into your court. Make your culture a meeting place of the world's traditions."
  eclectic_traditions_decision_confirm: "Throw the doors open"
- eclectic_traditions_decision_desc: "For a long season your hall is filled with strange voices. A Greek physician argues with a desert ascetic; a steppe singer trades verses with a Frankish monk; a merchant from far Cathay lays out silks unknown in your land. You feast them all, listen to them all, and quietly let the heralds know: no foreign rite is forbidden in your lands."
+ eclectic_traditions_decision_desc: "For a long season your hall is filled with strange voices. A Greek physician argues with a desert ascetic; a steppe singer trades verses with a Frankish monk; a merchant from far Cathay lays out silks unknown in your land. You feast them all, listen to them all, and quietly let the heralds know: no foreign custom is forbidden in your lands."
 
  eclectic_traditions_decision_effect_tt: "Foreign customs are welcomed at your high table."
 
