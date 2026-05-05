@@ -1,24 +1,24 @@
 ﻿l_english:
  decision_group_type_questionable_decisions: "Questionable Decisions"
  crimson_bath_decision: "The Crimson Bath"
- crimson_bath_decision_tooltip: "An ancient rite, half-remembered and half-feared. The texts that describe it survive only in the libraries of master physicians — and even then, in pages bound at the back. A captive of your dungeons gives up their blood; you take back the years. Each affliction undone demands its own sacrifice."
- crimson_bath_decision_confirm: "Begin the rite"
- crimson_bath_decision_desc: "Behind sealed doors in the deepest cellar of your keep, the old rite is prepared. Captives, dragged from your dungeons, are bound to the iron table in turn; the basin beneath fills slowly. You drink, and you wash, and somewhere in the long hour the ache in your bones begins to ease. By dawn you are someone younger. The servants who clean the chamber do not meet your eye."
+ crimson_bath_decision_tooltip: "An ancient practice, half-remembered and half-feared. The texts that describe it survive only in the libraries of master physicians, and even then in pages bound at the back. A captive of your dungeons gives up their blood; you take back the years. Each affliction undone demands its own sacrifice."
+ crimson_bath_decision_confirm: "Begin the ritual"
+ crimson_bath_decision_desc: "Behind sealed doors in the deepest cellar of your keep, the old ritual is prepared. Captives, dragged from your dungeons, are bound to the iron table in turn; the basin beneath fills slowly. You drink, and you wash, and somewhere in the long hour the ache in your bones begins to ease. By dawn you are someone younger. The servants who clean the chamber do not meet your eye."
  crimson_bath_decision_effect_tt: "Removes one of [GetTrait('infirm').GetName( GetNullCharacter )|U], [GetTrait('clouded_eyes').GetName( GetNullCharacter )|U], [GetTrait('faltering_heart').GetName( GetNullCharacter )|U], [GetTrait('fragile_bones').GetName( GetNullCharacter )|U], or [GetTrait('withering_mind').GetName( GetNullCharacter )|U] in a forbidden ritual."
 
  crimson_bath_requires_whole_of_body_tt: "You have the [GetTrait('whole_of_body').GetName( GetNullCharacter )] trait"
  crimson_bath_requires_prisoner_tt: "You hold at least one captive younger than 30 in your dungeons"
 
  nick_the_vampire:0 "the Vampire"
- nick_the_vampire_desc:0 "Whispers in the kitchens and the cellars say that [CHARACTER.GetShortUINameNoTooltipNoFormat|U] keeps young by drinking the blood of captives."
+ nick_the_vampire_desc:0 "Whispers in the kitchens and the cellars say that [CHARACTER.GetShortUINameNoTooltipNoFormat|U] stays young by drinking the blood of captives."
  nick_the_strigoi:0 "the Strigoi"
  nick_the_strigoi_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is named for the restless dead of old folktales, who rise to feed on the living."
  nick_the_pale:0 "the Pale"
- nick_the_pale_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] is rarely seen by daylight, and the servants do not meet their eye."
+ nick_the_pale_desc:0 "Some at court call [CHARACTER.GetShortUINameNoTooltipNoFormat|U] this. They will not explain themselves."
 
  crimson_bath_kin_grief: "Bled my kin in the cellar"
 
- crimson_bath.0001.desc.position.first: "Behind sealed doors in the deepest cellar of your keep, the rite begins. The first captive is led to the iron table; the basin beneath fills slowly."
+ crimson_bath.0001.desc.position.first: "Behind sealed doors in the deepest cellar of your keep, the ritual begins. The first captive is led to the iron table; the basin beneath fills slowly."
  crimson_bath.0001.desc.position.next: "Another captive is led in. The basin below the iron table fills again."
 
  crimson_bath.0001.desc.malady.infirm: "The wasting grip you have carried for years releases your bones, finger by finger, like something letting go in the dark."
@@ -30,8 +30,8 @@
  crimson_bath.0001.desc.sadistic: "You relish their screams. The captive's terror at the basin is not lost on you, and you do not look away."
 
  crimson_bath.0001.a: "Open the vein"
- crimson_bath.0001.b: "Stop the rite here"
+ crimson_bath.0001.b: "Stop the ritual here"
 
  crimson_bath.0002.t: "Numb"
- crimson_bath.0002.desc: "Once, an evening like this would have woken you sweating; you would have walked the corridors until dawn. Tonight, you slept clean through. Whatever was once in you that flinched, it does not flinch any more."
+ crimson_bath.0002.desc: "The basin is emptied and refilled. You watch the next captive bound to the table without the old tightness in your chest. Whatever was once in you that flinched, it does not flinch any more."
  crimson_bath.0002.a: "So be it"

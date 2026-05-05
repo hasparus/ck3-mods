@@ -9,12 +9,32 @@ crimson_bath_aftermath_effect = {
 	if = {
 		limit = { has_any_nickname = no }
 		random_list = {
-			50 = { give_nickname = nick_the_vampire }
-			15 = { give_nickname = nick_the_red }
-			15 = { give_nickname = nick_the_strigoi }
-			10 = { give_nickname = nick_the_undying }
-			10 = { give_nickname = nick_the_pale }
+			25 = { give_nickname = nick_the_vampire }
+			25 = { give_nickname = nick_the_strigoi }
+			25 = { give_nickname = nick_the_undying }
+			25 = { give_nickname = nick_the_pale }
 		}
 	}
 	remove_variable = crimson_bath_in_progress
+}
+
+# Continue the rite into another captive screen if maladies and eligible
+# captives remain, otherwise close out via aftermath.
+crimson_bath_continue_or_finish_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_trait = infirm
+				has_trait = clouded_eyes
+				has_trait = faltering_heart
+				has_trait = fragile_bones
+				has_trait = withering_mind
+			}
+			any_prisoner = { count >= 1 age < 30 }
+		}
+		trigger_event = crimson_bath.0001
+	}
+	else = {
+		crimson_bath_aftermath_effect = yes
+	}
 }

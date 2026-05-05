@@ -87,23 +87,6 @@ crimson_bath.0001 = {
 			add_stress = minor_stress_loss
 		}
 
-		# 10% chance per sacrifice to fall into the Numb screen, but only
-		# for faiths that don't already bless ritual sacrifice, and only
-		# while root carries neither callous nor sadistic.
-		if = {
-			limit = {
-				NOR = {
-					has_trait = callous
-					has_trait = sadistic
-				}
-				faith = { NOT = { has_doctrine = tenet_human_sacrifice } }
-			}
-			random = {
-				chance = 10
-				trigger_event = crimson_bath.0002
-			}
-		}
-
 		set_variable = { name = crimson_bath_in_progress }
 
 		if = {
@@ -127,21 +110,26 @@ crimson_bath.0001 = {
 			remove_trait = withering_mind
 		}
 
+		# 10% chance per sacrifice to interrupt with the Numb screen, but only
+		# for faiths that don't already bless ritual sacrifice, and only while
+		# root carries neither callous nor sadistic. The Numb screen lands
+		# inline (it adds callous + stress and then continues the chain), so
+		# subsequent kills naturally fail the gate.
 		if = {
 			limit = {
-				OR = {
-					has_trait = infirm
-					has_trait = clouded_eyes
-					has_trait = faltering_heart
-					has_trait = fragile_bones
-					has_trait = withering_mind
+				NOR = {
+					has_trait = callous
+					has_trait = sadistic
 				}
-				any_prisoner = { count >= 1 age < 30 }
+				faith = { NOT = { has_doctrine = tenet_human_sacrifice } }
 			}
-			trigger_event = crimson_bath.0001
+			random_list = {
+				10 = { trigger_event = crimson_bath.0002 }
+				90 = { crimson_bath_continue_or_finish_effect = yes }
+			}
 		}
 		else = {
-			crimson_bath_aftermath_effect = yes
+			crimson_bath_continue_or_finish_effect = yes
 		}
 	}
 
@@ -172,5 +160,6 @@ crimson_bath.0002 = {
 		name = crimson_bath.0002.a
 		add_trait = callous
 		add_stress = medium_stress_loss
+		crimson_bath_continue_or_finish_effect = yes
 	}
 }
